@@ -1,12 +1,9 @@
-# from pyexpat import model
-
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import joblib
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 
-# df =pd.read_csv("data\house_price_dataset.csv")
 df = pd.read_csv("house_data.csv" )
 print(df.isnull().sum())
 
