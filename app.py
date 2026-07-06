@@ -42,5 +42,5 @@ def predict():
 
 # Run Flask App
 if __name__ == "__main__":
-    # app.run(debug=True) apne laptop me ruk krne ke liye 
-  app.run(host="0.0.0.0", port=5000, debug=True)  #dusare ip me run krne ke liye
+     app.run(debug=True) # apne laptop me ruk krne ke liye 
+  # app.run(host="0.0.0.0", port=5000, debug=True)  #dusare ip me run krne ke liye
