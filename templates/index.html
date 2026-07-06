@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏠 House Price Prediction</h1>
+
+        <p>Enter the house details to predict the estimated price.</p>
+
+        <form action="/predict" method="POST">
+
+            <label>Area (sq ft)</label>
+            <input type="number"
+                   name="Area"
+                   placeholder="Enter Area"
+                   min="1"
+                   required>
+
+            <label>Bedrooms</label>
+            <input type="number"
+                   name="Bedrooms"
+                   placeholder="Enter Bedrooms"
+                   min="1"
+                   required>
+
+            <label>Bathrooms</label>
+            <input type="number"
+                   name="Bathrooms"
+                   placeholder="Enter Bathrooms"
+                   min="1"
+                   required>
+
+            <label>House Age (Years)</label>
+            <input type="number"
+                   name="House_Age"
+                   placeholder="House Age"
+                   min="0"
+                   required>
+
+            <label>Location Score</label>
+            <input type="number"
+                   name="Location_Score"
+                   placeholder="1 - 10"
+                   step="0.1"
+                   min="1"
+                   max="10"
+                   required>
+
+            <button type="submit">
+                Predict Price
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+
+        <div class="result">
+
+            <h2>{{ prediction_text }}</h2>
+
+        </div>
+
+        {% endif %}
+ 
+        <div class="footer">
+
+            <p>Developed by <strong>Ramesh Godara</strong></p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
